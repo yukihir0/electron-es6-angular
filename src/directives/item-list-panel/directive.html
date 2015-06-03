@@ -1,0 +1,18 @@
+<div class="item-list-panel">
+  <div class="row">
+    <div class="col-md-4">
+      <input type="text" ng-model="ctrl.url" ng-keydown="ctrl.handleKeyDown($event)" class="form-control feed-url" name="feed-url">
+    </div>
+    <button ng-click="ctrl.handleClearButton($event)" class="btn btn-danger btn-clear">clear</button>
+    <button ng-click="ctrl.handleResetButton($event)" class="btn btn-warning btn-reset">reset</button>
+    <button ng-click="ctrl.handleParseButton($event)" class="btn btn-primary btn-parse">parse</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul ng-repeat="item in ctrl.items" class="item-list">
+        <li><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
+        <p>{{item.pubDate | date: "yyyy-MM-dd HH:mm:ss"}}</p>
+      </ul>
+    </div>
+  </div>
+</div>
