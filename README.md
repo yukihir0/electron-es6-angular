@@ -9,6 +9,11 @@ npm install
 npm start
 ```
 
+## Package
+
+```
+gulp package
+```
 ## License
 
 Copyright &copy; 2015 yukihir0
